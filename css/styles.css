@@ -1,0 +1,251 @@
+:root {
+    --fondo: #FFF5E1;
+    --rosa: #FFC0CB;
+    --chocolate: #8B4513;
+    --texto: #5D4037;
+    --texto-secundario: #B0BEC5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--chocolate);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    background-color: var(--rosa);
+    color: var(--chocolate);
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #fff;
+}
+
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2, h3 {
+    font-family: 'Pacifico', cursive;
+    color: var(--chocolate);
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+iframe {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.producto {
+    background: #fff;
+    border: 1px solid var(--chocolate);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.producto h4 {
+    font-family: 'Pacifico', cursive;
+    color: var(--chocolate);
+    margin-bottom: 0.3rem;
+}
+
+.producto .precio {
+    font-weight: bold;
+    color: var(--chocolate);
+    margin-bottom: 0.5rem;
+}
+
+.producto button {
+    background-color: var(--chocolate);
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.producto button:hover {
+    background-color: var(--rosa);
+    color: var(--chocolate);
+}
+
+#carrito {
+    background: #fff;
+    border: 1px solid var(--chocolate);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+#lista-carrito {
+    margin-bottom: 1rem;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--texto-secundario);
+    padding: 0.5rem 0;
+}
+
+.item-carrito button {
+    background-color: var(--chocolate);
+    color: #fff;
+    border: none;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 0.3rem;
+}
+
+#resumen-carrito {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#vaciar-carrito {
+    background-color: var(--chocolate);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#vaciar-carrito:hover {
+    background-color: var(--rosa);
+    color: var(--chocolate);
+}
+
+/* Formulario */
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.campo input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem;
+    border: 1px solid var(--chocolate);
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+}
+
+.campo .error {
+    display: block;
+    color: #b00020;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+.campo .exito {
+    color: #006400;
+    font-weight: bold;
+}
+
+form button {
+    background-color: var(--chocolate);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: var(--rosa);
+    color: var(--chocolate);
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--chocolate);
+    color: #fff;
+    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .grid-productos {
+        grid-template-columns: 1fr;
+    }
+}
